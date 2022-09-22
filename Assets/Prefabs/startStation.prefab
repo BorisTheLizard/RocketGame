@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2757479082363780823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4120722283403753492}
+  m_Layer: 7
+  m_Name: tpPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4120722283403753492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2757479082363780823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1079815058334599409}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4687005092734600053
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,6 +68,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7753231018604036800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687719363878302660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035e38fce8442264097e4817c81a356c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  point: {fileID: 4120722283403753492}
 --- !u!1 &5605573736153933839
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,29 +637,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5350354285577427407}
     m_Modifications:
-    - target: {fileID: 1349981161124282057, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1810756006415588084, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.1621876
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalScale.y
-      value: -0.1591634
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.3512006
+      value: -0.6832384
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -623,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27
+      value: 0.0243
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -661,13 +689,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LounchPad
       objectReference: {fileID: 0}
-    - target: {fileID: 7304675859014690245, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_TagString
-      value: Friendly
-      objectReference: {fileID: 0}
-    - target: {fileID: 7304675859014690245, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
+    - target: {fileID: 8353241408847854993, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
@@ -683,21 +707,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5350354285577427407}
     m_Modifications:
-    - target: {fileID: 1349981161124282057, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152269844441551658, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalScale.y
-      value: -0.67726624
+      value: -0.4202195
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,7 +721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.623
+      value: 0.5683
       objectReference: {fileID: 0}
     - target: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -739,24 +755,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4956365094923579515, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.12
-      objectReference: {fileID: 0}
     - target: {fileID: 7304675859014690245, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
       propertyPath: m_Name
-      value: LounchPad (1)
+      value: LounchPadTrig
       objectReference: {fileID: 0}
     - target: {fileID: 7304675859014690245, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353241408847854993, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
+--- !u!1 &4687719363878302660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7304675859014690245, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
+  m_PrefabInstance: {fileID: 2617000475603408385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1079815058334599409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3075169105313554160, guid: 0dfbc2e9fa948ec499207b97e6d5d9c2, type: 3}
