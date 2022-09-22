@@ -36,6 +36,7 @@ public class RocketMovement : MonoBehaviour
     {
         ProcessThrust();
         ProcessRotation();
+        
     }
 
     public void ProcessThrust()
