@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MobileController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MobileController : MonoBehaviour
     public static int ScreenWidth;
     public static int ScreenHeight;
     [SerializeField] Text resText;
+    [SerializeField] Text LvlText;
 
     public static AndroidJavaObject vibrator;
     public static bool vibrCarout;
@@ -49,8 +51,9 @@ public class MobileController : MonoBehaviour
            Screen.SetResolution(ScreenWidth, ScreenHeight, true);
            // postProcess.SetActive(!true);
         }
-
         resText.text = "ScreenRes: " + ScreenHeight.ToString() + "X" + ScreenWidth.ToString();
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        LvlText.text = "Lvl = " + currentSceneIndex;
     }
 
 
@@ -124,6 +127,12 @@ public class MobileController : MonoBehaviour
         LowRes = false;
         HiRes = false;
         NormRes = !false;
+    }
+
+    public void SkipLvls()
+    {
+        menuMenu.SetActive(false);
+        SceneManager.LoadScene(11);
     }
 
     IEnumerator vibration()

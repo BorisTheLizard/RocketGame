@@ -14,7 +14,8 @@ public class lavaMove : MonoBehaviour
 
     void Update()
     {
-        float offset = Time.time * scrollSpeed;
-        rend.material.mainTextureOffset = new Vector2(offset, 0);
+        float offsetX = Time.time * scrollSpeed;
+        float offsetY = Time.time * scrollSpeed;
+        rend.material.mainTextureOffset = new Vector2(offsetX, offsetY);
     }
 }
