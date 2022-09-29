@@ -8,6 +8,7 @@ TagManager:
   - Fuel
   - Secret
   - Rocket
+  - triggerrator
   layers:
   - Default
   - TransparentFX

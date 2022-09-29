@@ -132,8 +132,16 @@ public class MobileController : MonoBehaviour
     public void SkipLvls()
     {
         menuMenu.SetActive(false);
+        Time.timeScale = 1;
         SceneManager.LoadScene(11);
     }
+    public void SkipLvls21()
+    {
+        menuMenu.SetActive(false);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(21);
+    }
+
 
     IEnumerator vibration()
     {
