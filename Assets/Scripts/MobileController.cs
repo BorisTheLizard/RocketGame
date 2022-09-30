@@ -142,6 +142,12 @@ public class MobileController : MonoBehaviour
         SceneManager.LoadScene(21);
     }
 
+    public void Boss()
+    {
+        menuMenu.SetActive(false);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(34);
+    }
 
     IEnumerator vibration()
     {
