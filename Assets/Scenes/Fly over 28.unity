@@ -610,6 +610,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4199401309831131938, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
+--- !u!1 &80268595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7415034306726294957, guid: 1351f40a0b3794b41abe3e7e6993be20, type: 3}
+  m_PrefabInstance: {fileID: 232738644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &80268596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80268595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7376a6b70cbcec14aab0f50c9401ae72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeedX: 0
+  scrollSpeedY: 0.01
 --- !u!1 &83960541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1327,7 @@ PrefabInstance:
     - target: {fileID: 9072363024411448440, guid: 1351f40a0b3794b41abe3e7e6993be20, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 686f578485534534ca250c5f502f9edb, type: 2}
+      objectReference: {fileID: 2100000, guid: ad39d59e02a6306448f0bba191ad8cf3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1351f40a0b3794b41abe3e7e6993be20, type: 3}
 --- !u!4 &261783587 stripped
@@ -10415,7 +10434,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.6818182, y: 1}
+    m_SensorSize: {x: 1.8939394, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

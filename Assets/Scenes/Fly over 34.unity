@@ -12992,6 +12992,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7023395361617206348, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
 --- !u!1 &1287303463 stripped
@@ -14563,7 +14567,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 5553baeed77a52543a15ff7fe8146c9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 686f578485534534ca250c5f502f9edb, type: 2}
+      objectReference: {fileID: 2100000, guid: 7f2d5d6be2b08f445bf72f46e4aa7a63, type: 2}
     - target: {fileID: 919132149155446097, guid: 5553baeed77a52543a15ff7fe8146c9b, type: 3}
       propertyPath: m_Name
       value: LongTonnel (1)
@@ -21318,7 +21322,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6bad39ff6980c114eab3dc1718530ed7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 686f578485534534ca250c5f502f9edb, type: 2}
+      objectReference: {fileID: 2100000, guid: f6008e4eddb35dd42b14630352146942, type: 2}
     - target: {fileID: 919132149155446097, guid: 6bad39ff6980c114eab3dc1718530ed7, type: 3}
       propertyPath: m_Name
       value: block (49)
@@ -21589,7 +21593,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 5553baeed77a52543a15ff7fe8146c9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 686f578485534534ca250c5f502f9edb, type: 2}
+      objectReference: {fileID: 2100000, guid: f6008e4eddb35dd42b14630352146942, type: 2}
     - target: {fileID: 919132149155446097, guid: 5553baeed77a52543a15ff7fe8146c9b, type: 3}
       propertyPath: m_Name
       value: LongTonnel
@@ -23379,7 +23383,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8922559, y: 1}
+    m_SensorSize: {x: 1.8939394, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

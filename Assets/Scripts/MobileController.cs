@@ -146,7 +146,7 @@ public class MobileController : MonoBehaviour
     {
         menuMenu.SetActive(false);
         Time.timeScale = 1;
-        SceneManager.LoadScene(34);
+        SceneManager.LoadScene(33);
     }
 
     IEnumerator vibration()
