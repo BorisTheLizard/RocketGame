@@ -9,9 +9,10 @@ public class launchPadTPCenter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if(other.tag == "Rocket")
+       if(other.tag == "triggerrator")
         {
-            other.attachedRigidbody.velocity = new Vector3(0,0,0);
+            Debug.Log("Triggered");
+            Player.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
             Player.transform.position = point.transform.position;
             Player.transform.rotation = Quaternion.Euler(0, 0, 0);
         } 

@@ -17,7 +17,13 @@ public class destroyerTrigg : MonoBehaviour
         impulse = transform.GetComponent<CinemachineImpulseSource>();
     }
     public void OnTriggerEnter(Collider other)
-    {
+    {   
+        if(other.tag == "Rocket")
+        {
+            return;
+        }
+        else
+        {
         Handheld.Vibrate();
         impulse.GenerateImpulse();
         if (!audioSource.isPlaying)
@@ -26,5 +32,6 @@ public class destroyerTrigg : MonoBehaviour
         }
         Instantiate(crashParticles, other.transform.position, Quaternion.identity);
         Destroy(other.gameObject);
+        }
     }
 }

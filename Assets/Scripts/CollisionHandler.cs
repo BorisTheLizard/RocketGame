@@ -61,11 +61,9 @@ public class CollisionHandler : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Secret":
-                Debug.Log("COLLUSION!!!!");
                 audioSource.PlayOneShot(secretSound);
                 break;
             case "Friendly":
-                Debug.Log("FRIENDLY!!!");
                 break;
             case "Finish":
                 StartSuccessSequence();

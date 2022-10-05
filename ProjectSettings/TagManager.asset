@@ -9,6 +9,7 @@ TagManager:
   - Secret
   - Rocket
   - triggerrator
+  - Crystals
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Player
   - WalkingGround
   - Rocket
-  - 
+  - ProjectilesIgnorantLayer
   - 
   - 
   - 
