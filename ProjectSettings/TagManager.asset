@@ -10,6 +10,7 @@ TagManager:
   - Rocket
   - triggerrator
   - Crystals
+  - laser
   layers:
   - Default
   - TransparentFX

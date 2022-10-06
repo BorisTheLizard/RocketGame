@@ -36,7 +36,11 @@ public class RocketMovement : MonoBehaviour
     {
         ProcessThrust();
         ProcessRotation();
-        
+        float vectorZ = transform.eulerAngles.z;
+        if(transform.rotation.x != 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, vectorZ);
+        }
     }
 
     public void ProcessThrust()
@@ -99,9 +103,8 @@ public class RocketMovement : MonoBehaviour
     public void ApplyRotation(float rotationThisFrame)
     {
         rb.freezeRotation = true;
-        // freez the rotation so we can manually rotate
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-        rb.freezeRotation = false; // Unfreezing rotatetion so system can take control over
+        rb.freezeRotation = false;
     }
     private bool IsGrouded()
     {

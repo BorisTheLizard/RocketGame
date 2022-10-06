@@ -10,6 +10,7 @@ public class UFOController : MonoBehaviour
 
 
     [Header("Shooting Vars")]
+    [SerializeField] ParticleSystem laser;
     [SerializeField] GameObject Projectiles;
     [SerializeField] float ShootingPower = 200f;
     bool ShootingTime = false;
@@ -57,8 +58,9 @@ public class UFOController : MonoBehaviour
         audioSource.PlayOneShot(clip);
         yield return new WaitForSeconds(timeToWait);
         audioSource.PlayOneShot(shooting);
-        GameObject bullets = Instantiate(Projectiles, shootingPoint.position, Quaternion.identity);
-        bullets.GetComponent<Rigidbody>().AddRelativeForce(shootingPoint.forward * ShootingPower);
+        laser.Play();
+        //GameObject bullets = Instantiate(Projectiles, shootingPoint.position, Quaternion.identity);
+        //bullets.GetComponent<Rigidbody>().AddRelativeForce(shootingPoint.forward * ShootingPower);
         agroLight.enabled = false;
         ShootingTime = false;
     }
