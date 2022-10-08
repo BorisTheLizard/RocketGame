@@ -15,7 +15,7 @@ public class signalTrigScr : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Rocket")
+        if(other.tag == "triggerrator")
         {
             text.SetActive(true);
             if (!audioSource.isPlaying)

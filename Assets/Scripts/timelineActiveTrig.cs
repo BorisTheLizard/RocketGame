@@ -8,7 +8,7 @@ public class timelineActiveTrig : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Rocket")
+        if (other.tag == "triggerrator")
         {
             timeline.SetActive(true);
         }
