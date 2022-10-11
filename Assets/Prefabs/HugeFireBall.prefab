@@ -4819,9 +4819,9 @@ GameObject:
   - component: {fileID: 6197390824321565377}
   - component: {fileID: 6197390824321565376}
   - component: {fileID: 6197390824321565383}
-  - component: {fileID: 3919893130792146213}
   - component: {fileID: 7649947207748697186}
   - component: {fileID: -3352196951001473136}
+  - component: {fileID: -3875600960139282302}
   m_Layer: 0
   m_Name: HugeFireBall
   m_TagString: Untagged
@@ -4923,19 +4923,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3919893130792146213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6197390824321565382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce18ce02ffcf15b4fbecf744bbc6323d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticles: {fileID: 1469142659871422, guid: 3897570affcec2940900250450bb2a69, type: 3}
 --- !u!108 &7649947207748697186
 Light:
   m_ObjectHideFlags: 0
@@ -5013,3 +5000,17 @@ MonoBehaviour:
   xAngle: 0
   yAngle: 200
   zAngle: 300
+--- !u!114 &-3875600960139282302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197390824321565382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431f00ad2fe984e4996d9b127446c23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 1469142659871422, guid: 9467e14ca05438744887d6b9da0478ea, type: 3}
+  emptyEuler: {fileID: 665883375460369619, guid: 9cbc3b1bc8e9ef14389583150c165376, type: 3}

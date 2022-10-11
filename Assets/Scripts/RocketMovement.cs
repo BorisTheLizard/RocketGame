@@ -26,8 +26,9 @@ public class RocketMovement : MonoBehaviour
     
     void Start()
     {
-       rb = GetComponent<Rigidbody>();
-       audioSource = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
+        //float Zposition = transform.position.z;
     }
 
     
@@ -62,6 +63,7 @@ public class RocketMovement : MonoBehaviour
     private void Thrusting()
     {
         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+        //transform.position = new Vector3(0, 0, Zposition);
 
         if (!audioSource.isPlaying)
         {
