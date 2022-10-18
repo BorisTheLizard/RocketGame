@@ -248,11 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.radiusScale
-      value: 28.4
+      value: 20.7
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.scalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -272,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.colliderForce
-      value: 2.82
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.collisionMode
@@ -280,15 +280,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.minScalar
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Dampen.scalar
-      value: 0.22
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.maxCollisionShapes
-      value: 37
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4522535834785525774, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: m_IsActive
@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6132442321531623585, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.scalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6132442321531623585, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strengthY.scalar
@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6132442321531623585, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.minScalar
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6132442321531623585, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
@@ -723,11 +723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.radiusScale
-      value: 28.4
+      value: 20.7
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.scalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -747,7 +747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.colliderForce
-      value: 2.82
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.collisionMode
@@ -755,15 +755,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.minScalar
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Dampen.scalar
-      value: 0.22
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -783,7 +783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.maxCollisionShapes
-      value: 37
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
@@ -815,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4522535834785525774, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: m_IsActive
@@ -929,11 +929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.radiusScale
-      value: 28.4
+      value: 20.7
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.scalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -953,7 +953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.colliderForce
-      value: 2.82
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.collisionMode
@@ -961,15 +961,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: NoiseModule.strength.minScalar
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_Dampen.scalar
-      value: 0.22
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -989,7 +989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.maxCollisionShapes
-      value: 37
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
@@ -1021,7 +1021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4522535834785525774, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: m_IsActive

@@ -12,7 +12,13 @@ public class CircleSpawner : MonoBehaviour
     [SerializeField] int TimesToCreateMax = 8;
     [SerializeField] float forcePower = 100f;
     [SerializeField] float SpawnDelay = 0.5f;
+    
 
+    private void Start()
+    {
+        float RotatorZ = Random.Range(20, 60);
+        transform.Rotate(0, 0, RotatorZ);
+    }
 
     private void Update()
     {
@@ -31,7 +37,7 @@ public class CircleSpawner : MonoBehaviour
         waiting = true;
         yield return new WaitForSeconds(SpawnDelay);
         GameObject projectile = Instantiate(ball, direction.transform.position, transform.rotation);
-        projectile.GetComponent<Rigidbody>().AddRelativeForce(Vector3.right* forcePower * Time.deltaTime);
+        projectile.GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * forcePower * Time.deltaTime);
         transform.Rotate(0, 0, rotationDeg);
         TimesToCreate += 1;
         waiting = !true;

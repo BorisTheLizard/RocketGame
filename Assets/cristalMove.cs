@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class cristalMove : MonoBehaviour
 {
-    Rigidbody rb;
     [SerializeField] float speed = 0.1f;
-
+    Rigidbody rb;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        rb.transform.Translate(0.01f, 0, 0 * speed * Time.deltaTime);
+        rb.transform.Translate(Vector3.right * Time.deltaTime * speed);
     }
 }

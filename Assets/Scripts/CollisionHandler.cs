@@ -41,9 +41,10 @@ public class CollisionHandler : MonoBehaviour
         {
             LoadNextLevel();
         }
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             collisionDisabled = !collisionDisabled;
+            Debug.Log("Cheat");
         }
     }
 

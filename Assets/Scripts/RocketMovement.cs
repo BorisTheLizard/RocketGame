@@ -16,7 +16,7 @@ public class RocketMovement : MonoBehaviour
     [SerializeField] ParticleSystem LeftThrust;
     [SerializeField] GameObject spinner;
 
-    [SerializeField] CapsuleCollider col;
+    CapsuleCollider col;
     [SerializeField] LayerMask WalkingGround;
 
     Rigidbody rb;
@@ -27,8 +27,8 @@ public class RocketMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
         audioSource = GetComponent<AudioSource>();
-        //float Zposition = transform.position.z;
     }
 
     
@@ -63,7 +63,7 @@ public class RocketMovement : MonoBehaviour
     private void Thrusting()
     {
         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-        //transform.position = new Vector3(0, 0, Zposition);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 1.33f);
 
         if (!audioSource.isPlaying)
         {

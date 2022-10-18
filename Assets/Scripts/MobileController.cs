@@ -141,6 +141,18 @@ public class MobileController : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(21);
     }
+    public void SkipLvls38()
+    {
+        menuMenu.SetActive(false);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(37);
+    }
+    public void SkipLvls45()
+    {
+        menuMenu.SetActive(false);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(44);
+    }
 
     public void Boss()
     {
