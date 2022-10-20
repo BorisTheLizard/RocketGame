@@ -152,4 +152,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fly over 49.unity
     guid: f00afdffb30f91941a8f2fb273cd8cc3
+  - enabled: 1
+    path: Assets/Scenes/Fly over 50.unity
+    guid: ae8349590e395c647a698a0d18187ddc
   m_configObjects: {}
