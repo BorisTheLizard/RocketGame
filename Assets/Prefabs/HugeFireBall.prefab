@@ -5052,8 +5052,8 @@ MonoBehaviour:
       m_DecayTime: 0.7
       m_ScaleWithImpact: 1
       m_HoldForever: 0
-    m_ImpactRadius: 100
+    m_ImpactRadius: 54.8
     m_DirectionMode: 0
     m_DissipationMode: 2
-    m_DissipationDistance: 1000
+    m_DissipationDistance: 22.1
     m_PropagationSpeed: 343

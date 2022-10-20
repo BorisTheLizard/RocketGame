@@ -11,7 +11,6 @@ public class launchPadTPCenter : MonoBehaviour
     {
        if(other.tag == "triggerrator")
         {
-            Debug.Log("Triggered");
             Player.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
             Player.transform.position = point.transform.position;
             Player.transform.rotation = Quaternion.Euler(0, 0, 0);
