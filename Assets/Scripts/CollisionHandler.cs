@@ -30,6 +30,7 @@ public class CollisionHandler : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         ButtonAcelerate = GameObject.Find("ButtonAccelerate");
+        //Debug.Log(lvlListChoosingBtns.LvlPassedCounter);
     }
     void Update()
     {

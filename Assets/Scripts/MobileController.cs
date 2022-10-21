@@ -20,6 +20,8 @@ public class MobileController : MonoBehaviour
     public static bool vibrationOn;
 
     [SerializeField] GameObject menuMenu;
+    [SerializeField] GameObject ChooseLvl;
+
 
     //Resolution Change bools
     public static bool LowRes = false;
@@ -127,6 +129,11 @@ public class MobileController : MonoBehaviour
         LowRes = false;
         HiRes = false;
         NormRes = !false;
+    }
+
+    public void ChooseLvlScreen()
+    {
+        ChooseLvl.SetActive(true);
     }
 
     public void SkipLvls()

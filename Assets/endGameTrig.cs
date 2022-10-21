@@ -14,9 +14,10 @@ public class endGameTrig : MonoBehaviour
     {
         if(other.tag == "triggerrator")
         {
-            rocket.transform.position = tpPoint.position;
-            rocket.GetComponent<RocketMovement>().enabled = false;
-            rocket.GetComponent<Rigidbody>().useGravity = false;
+            rocket.SetActive(false);
+            //rocket.transform.position = tpPoint.position;
+            //rocket.GetComponent<RocketMovement>().enabled = false;
+            //rocket.GetComponent<Rigidbody>().useGravity = false;
             BlackScreen.SetActive(true);
             Invoke("crocchy", 2);
         }

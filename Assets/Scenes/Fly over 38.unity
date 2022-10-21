@@ -20566,7 +20566,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.33670035, y: 1}
+    m_SensorSize: {x: 0.33333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -20683,6 +20683,22 @@ PrefabInstance:
     - target: {fileID: 515154777051820704, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
       propertyPath: m_Name
       value: ConveyourBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 857754703293950019, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0353
+      objectReference: {fileID: 0}
+    - target: {fileID: 857754703293950019, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0056
+      objectReference: {fileID: 0}
+    - target: {fileID: 857754703293950020, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
+      propertyPath: m_DrawHalo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 857754703293950020, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
+      propertyPath: m_Intensity
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 895620557112125466, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
       propertyPath: m_RootOrder
