@@ -28,10 +28,4 @@ public class lvlManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(levelIndex);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

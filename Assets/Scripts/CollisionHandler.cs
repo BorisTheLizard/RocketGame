@@ -136,17 +136,20 @@ public class CollisionHandler : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
-        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+
+/*        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
             nextSceneIndex = 0;
-        }
-        if (nextSceneIndex >= PlayerPrefs.GetInt("lvlsUnlocked"))
+        }*/
+
+        if (currentSceneIndex <= PlayerPrefs.GetInt("lvlsUnlocked"))
         {
-            PlayerPrefs.SetInt("lvlsUnlocked", nextSceneIndex + 1);
+            PlayerPrefs.SetInt("lvlsUnlocked", nextSceneIndex);
         }
         Debug.Log("lvl" + PlayerPrefs.GetInt("lvlsUnlocked") + " unlocked");
+
         SceneManager.LoadScene(nextSceneIndex);
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        //SceneManager.LoadScene(currentSceneIndex + 1);
     }
     void ReloadLevel()
     {

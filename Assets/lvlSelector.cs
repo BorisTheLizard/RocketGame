@@ -8,8 +8,8 @@ public class lvlSelector : MonoBehaviour
 {
     public int lvl;
     public Text lvlText;
-    Button butt;
-    [SerializeField] bool lvlPassed = false;
+    //Button butt;
+    //[SerializeField] bool lvlPassed = false;
 
     private void Start()
     {
