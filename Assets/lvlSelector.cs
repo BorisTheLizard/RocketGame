@@ -14,18 +14,8 @@ public class lvlSelector : MonoBehaviour
     private void Start()
     {
         lvlText.text = lvl.ToString();
-        butt = GetComponent<Button>();
-        butt.interactable = false;
-
-        /*        if (lvlListChoosingBtns.LvlPassedCounter == lvl - 1 && lvlPassed == false)
-                {
-                    butt.interactable = !false;
-                    lvlPassed = true;
-                }*/
-        for (int lvl = 0; lvl == lvlListChoosingBtns.LvlPassedCounter; lvl++)
-        {
-            butt.interactable = !false;
-        }
+        //butt = GetComponent<Button>();
+        //butt.interactable = false;
     }
 
 

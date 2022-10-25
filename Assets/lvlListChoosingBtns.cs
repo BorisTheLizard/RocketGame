@@ -13,11 +13,11 @@ public class lvlListChoosingBtns : MonoBehaviour
 
     [SerializeField] GameObject LvlList;
 
-    public static int LvlPassedCounter;
+    //public static int LvlPassedCounter;
 
     void Start()
     {
-        LvlPassedCounter = SceneManager.GetActiveScene().buildIndex;
+        //LvlPassedCounter = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void ChangeFrwd()

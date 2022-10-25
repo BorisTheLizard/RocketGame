@@ -140,6 +140,11 @@ public class CollisionHandler : MonoBehaviour
         {
             nextSceneIndex = 0;
         }
+        if (nextSceneIndex >= PlayerPrefs.GetInt("lvlsUnlocked"))
+        {
+            PlayerPrefs.SetInt("lvlsUnlocked", nextSceneIndex + 1);
+        }
+        Debug.Log("lvl" + PlayerPrefs.GetInt("lvlsUnlocked") + " unlocked");
         SceneManager.LoadScene(nextSceneIndex);
         SceneManager.LoadScene(currentSceneIndex + 1);
     }

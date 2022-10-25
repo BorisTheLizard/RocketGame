@@ -905,7 +905,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8532,7 +8532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 857754702693751313, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
       propertyPath: MaxDistance
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 857754702693751313, guid: 4a7163699744577418f002a1ea85fab6, type: 3}
       propertyPath: BypassEffects
