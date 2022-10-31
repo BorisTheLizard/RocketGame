@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 591174411833242885}
   - component: {fileID: 591174411833242891}
   - component: {fileID: 591174411833242884}
+  - component: {fileID: 7664720034796164441}
   m_Layer: 0
   m_Name: RocketCamera
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -171,6 +172,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &7664720034796164441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591174411833242889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def5a699e22e2a940a6d16f665338421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8331238492266265501
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +223,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8331238492266265501}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 

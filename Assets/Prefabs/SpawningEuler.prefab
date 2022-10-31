@@ -50,7 +50,7 @@ MonoBehaviour:
   rotationDeg: 60
   TimesToCreate: 0
   TimesToCreateMax: 6
-  forcePower: 1000
+  forcePower: 0.6
   SpawnDelay: 0.03
 --- !u!82 &8078285364846718067
 AudioSource:

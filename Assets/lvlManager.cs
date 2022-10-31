@@ -28,4 +28,8 @@ public class lvlManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(levelIndex);
     }
+    public void UnlockAll()
+    {
+        PlayerPrefs.SetInt("lvlsUnlocked", 50);
+    }
 }

@@ -154,7 +154,7 @@ Transform:
   m_LocalScale: {x: 8.456526, y: 1, z: 5.0572667}
   m_Children: []
   m_Father: {fileID: 2035618768}
-  m_RootOrder: 20
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!64 &10799248
 MeshCollider:
@@ -1976,7 +1976,7 @@ Transform:
   m_LocalScale: {x: 9.344461, y: 1, z: 5.0572667}
   m_Children: []
   m_Father: {fileID: 2035618768}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &272378387
 MeshCollider:
@@ -4786,7 +4786,7 @@ Transform:
   m_LocalScale: {x: 4.536936, y: 1, z: 5.0572667}
   m_Children: []
   m_Father: {fileID: 2035618768}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!64 &706414664
 MeshCollider:
@@ -5903,7 +5903,7 @@ Transform:
   m_LocalScale: {x: 8.456526, y: 1, z: 5.0572667}
   m_Children: []
   m_Father: {fileID: 2035618768}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: -1225, y: -90, z: 0}
 --- !u!64 &893510694
 MeshCollider:
@@ -8408,6 +8408,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: postProcess
+      value: 
+      objectReference: {fileID: 8331238492600753566}
     - target: {fileID: 5762385148147229404, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -10620,7 +10624,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.33333334, y: 1}
+    m_SensorSize: {x: 2.0858586, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13298,22 +13302,22 @@ Transform:
   - {fileID: 1765180812}
   - {fileID: 2104440234}
   - {fileID: 978232930}
+  - {fileID: 10799247}
   - {fileID: 236158249}
   - {fileID: 1911806231}
   - {fileID: 18568119}
   - {fileID: 2063653476}
-  - {fileID: 10799247}
   - {fileID: 522220431}
-  - {fileID: 1516786846}
   - {fileID: 893510693}
+  - {fileID: 1516786846}
   - {fileID: 1401214079}
   - {fileID: 569126340}
-  - {fileID: 1864063997}
   - {fileID: 272378386}
+  - {fileID: 1864063997}
   - {fileID: 1950232186}
   - {fileID: 116048494}
-  - {fileID: 402423574}
   - {fileID: 706414663}
+  - {fileID: 402423574}
   - {fileID: 2033578066}
   - {fileID: 332402209}
   - {fileID: 92128571}
@@ -14631,3 +14635,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551c7f8885f297643a180afb453d9916, type: 3}
+--- !u!1 &8331238492600753566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8331238492266265501, guid: 551c7f8885f297643a180afb453d9916, type: 3}
+  m_PrefabInstance: {fileID: 8331238492600753565}
+  m_PrefabAsset: {fileID: 0}

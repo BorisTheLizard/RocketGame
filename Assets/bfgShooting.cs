@@ -26,7 +26,7 @@ public class bfgShooting : MonoBehaviour
         WaitToshoot = true;
         yield return new WaitForSeconds(TimeTOWait);
         GameObject ball = Instantiate(proj, shootingPoint.transform.position, Quaternion.identity);
-        ball.GetComponent<Rigidbody>().AddForce(-Vector3.right * PushPower * Time.deltaTime);
+        ball.GetComponent<Rigidbody>().AddForce(-Vector3.right * PushPower,ForceMode.Impulse);
         WaitToshoot = false;
     }
 }

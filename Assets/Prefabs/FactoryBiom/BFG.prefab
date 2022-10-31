@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 8926095764356463809}
   proj: {fileID: 6197390824321565382, guid: 591d9f43141da0a40be4062a3255737d, type: 3}
-  PushPower: 20000
+  PushPower: 3
   TimeTOWait: 2
 --- !u!1 &8926095764356463810
 GameObject:

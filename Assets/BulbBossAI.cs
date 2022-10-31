@@ -9,6 +9,7 @@ public class BulbBossAI : MonoBehaviour
     [SerializeField] GameObject BossMoveController;
 
 
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -33,7 +34,6 @@ public class BulbBossAI : MonoBehaviour
 
     private IEnumerator TimeLine()
     {
-        Debug.Log("START corot");
         yield return new WaitForSeconds(2);
         IDLE1();
         yield return new WaitForSeconds(3);
@@ -61,10 +61,10 @@ public class BulbBossAI : MonoBehaviour
         IDLE1();
         yield return new WaitForSeconds(6);
         Attack1();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         IDLE1();
         yield return new WaitForSeconds(4);
-        Attack1();
+        Attack();
         yield return new WaitForSeconds(6);
         IDLE1();
         yield return new WaitForSeconds(6);
@@ -73,21 +73,27 @@ public class BulbBossAI : MonoBehaviour
         IDLE1();
         yield return new WaitForSeconds(6);
         Attack();
+        yield return new WaitForSeconds(1);
+        IDLE();
         yield return new WaitForSeconds(4);
         Attack1();
         yield return new WaitForSeconds(6);
         IDLE();
         yield return new WaitForSeconds(6);
         Attack();
+        yield return new WaitForSeconds(6);
+        IDLE();
         yield return new WaitForSeconds(4);
         Attack();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
+        IDLE1();
+        yield return new WaitForSeconds(3);
         cast();
     }
     private IEnumerator LineThree()
     {
         yield return new WaitForSeconds(6);
-        Attack1();
+        Attack();
         yield return new WaitForSeconds(4);
         IDLE();
         yield return new WaitForSeconds(6);
@@ -95,13 +101,15 @@ public class BulbBossAI : MonoBehaviour
         yield return new WaitForSeconds(4);
         Attack1();
         yield return new WaitForSeconds(4);
-        IDLE1();
+        IDLE();
         yield return new WaitForSeconds(4);
-        Attack1();
+        Attack();
         yield return new WaitForSeconds(3);
         IDLE1();
         yield return new WaitForSeconds(4);
         Attack1();
+        yield return new WaitForSeconds(6);
+        IDLE();
         yield return new WaitForSeconds(4);
         Attack();
         yield return new WaitForSeconds(6);
@@ -109,7 +117,7 @@ public class BulbBossAI : MonoBehaviour
         yield return new WaitForSeconds(3);
         Attack1();
         yield return new WaitForSeconds(3);
-        Attack1();
+        IDLE();
         yield return new WaitForSeconds(4);
         Attack();
         yield return new WaitForSeconds(5);
@@ -124,15 +132,15 @@ public class BulbBossAI : MonoBehaviour
         yield return new WaitForSeconds(4);
         Attack();
         yield return new WaitForSeconds(3);
-        IDLE1();
+        IDLE();
         yield return new WaitForSeconds(4);
         Attack();
         yield return new WaitForSeconds(3);
-        IDLE1();
+        IDLE();
         yield return new WaitForSeconds(3);
         Attack1();
         yield return new WaitForSeconds(3);
-        IDLE1();
+        IDLE();
         yield return new WaitForSeconds(4);
         Attack();
         yield return new WaitForSeconds(6);
@@ -142,9 +150,9 @@ public class BulbBossAI : MonoBehaviour
         yield return new WaitForSeconds(6);
         IDLE();
         yield return new WaitForSeconds(3);
-        Attack1();
+        Attack();
         yield return new WaitForSeconds(3);
-        Attack1();
+        IDLE();
         yield return new WaitForSeconds(3);
         Attack1();
         yield return new WaitForSeconds(6);
@@ -152,7 +160,7 @@ public class BulbBossAI : MonoBehaviour
         yield return new WaitForSeconds(2);
         Attack1();
         yield return new WaitForSeconds(2);
-        Attack1();
+        Attack();
         yield return new WaitForSeconds(3);
         Attack1();
         yield return new WaitForSeconds(3);

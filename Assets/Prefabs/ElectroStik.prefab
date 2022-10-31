@@ -313,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: lengthInSec
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: playOnAwake
@@ -408,6 +408,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
       value: 30
       objectReference: {fileID: 0}
@@ -422,6 +426,10 @@ PrefabInstance:
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: TrailModule.colorOverTrail.maxColor.b
@@ -788,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: lengthInSec
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: playOnAwake
@@ -883,6 +891,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
       value: 30
       objectReference: {fileID: 0}
@@ -896,6 +908,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
@@ -994,7 +1010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: lengthInSec
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: playOnAwake
@@ -1089,6 +1105,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
       value: 30
       objectReference: {fileID: 0}
@@ -1103,6 +1123,10 @@ PrefabInstance:
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2501872566173556154, guid: 608499eb89c296f478dadbbc400e7d28, type: 3}
       propertyPath: TrailModule.colorOverTrail.maxColor.b

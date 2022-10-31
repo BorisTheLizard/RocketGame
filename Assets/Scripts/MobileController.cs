@@ -15,75 +15,82 @@ public class MobileController : MonoBehaviour
     [SerializeField] Text resText;
     [SerializeField] Text LvlText;
 
-    public static AndroidJavaObject vibrator;
-    public static bool vibrCarout;
-    public static bool vibrationOn;
-
-    [SerializeField] GameObject menuMenu;
+    //UI
+    [SerializeField] GameObject maneMenu;
     [SerializeField] GameObject ChooseLvl;
+    [SerializeField] GameObject mainChooseLvl;
+    [SerializeField] GameObject OptionsMenu;
+    [SerializeField] GameObject mainChsLvlReturn;
+    [SerializeField] GameObject gameplayButtons;
 
 
     //Resolution Change bools
     public static bool LowRes = false;
-    public static bool HiRes = false;
     public static bool NormRes = !false;
-   // GameObject postProcess;
+    public GameObject postProcess;
+    public static bool PostProcessBool = false;
+
+    //music
+    GameObject music;
+    [SerializeField] GameObject slider;
+    
+    public static bool musicPlayBool = !false;
 
     private void Start()
     {
-        //postProcess = GameObject.Find("postProcess");
+        
+        music = GameObject.Find("musicPlay");
+        //audioSource = music.GetComponent<AudioSource>();
+        //musicMixer = music.GetComponent<AudioMixer>();
+        //Debug.Log(audioSource);
         if (LowRes)
         {
+            Application.targetFrameRate = 55;
             ScreenHeight = Display.main.systemHeight  / 2;
             ScreenWidth = Display.main.systemWidth  / 2;
             Screen.SetResolution(ScreenWidth, ScreenHeight, true);
-           // postProcess.SetActive(!true);
         }
-        if (HiRes)
-        {
-            ScreenHeight = Display.main.systemHeight;
-            ScreenWidth = Display.main.systemWidth;
-            Screen.SetResolution(ScreenWidth, ScreenHeight, true);
-            //postProcess.SetActive(true);
-        }
+
         if (NormRes)
         {
            ScreenHeight = Display.main.systemHeight - (Display.main.systemHeight /3);
            ScreenWidth = Display.main.systemWidth - (Display.main.systemWidth / 3);
            Screen.SetResolution(ScreenWidth, ScreenHeight, true);
-           // postProcess.SetActive(!true);
         }
         resText.text = "ScreenRes: " + ScreenHeight.ToString() + "X" + ScreenWidth.ToString();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         LvlText.text = "Lvl = " + currentSceneIndex;
-    }
 
-
-    public void ClickDown()
-    {
-        //Thrusting = true;
-
-        if (vibrationOn && vibrCarout == false)
+        //postProcess
+        if (PostProcessBool)
         {
-            Thrusting = true;
-            StartCoroutine(vibration());
+            postProcess.SetActive(true);
         }
         else
         {
-            Thrusting = true;
+            postProcess.SetActive(!true);
+        }
+
+        //music
+        if (musicPlayBool)
+        {
+            music.SetActive(true);
+        }
+        else
+        {
+            music.SetActive(!true);
         }
     }
-    public void vibrationThrust()
-    {
-        vibrationOn = !vibrationOn;
-    }
 
+
+    //ROCKET Controller
+    public void ClickDown()
+    {
+        Thrusting = true;
+    }
     public void ClickUp()
     {
-        StopAllCoroutines();
         Thrusting = !true;
-        vibrCarout = !true;
-        
     }
     public void ClickDownLeft()
     {
@@ -102,249 +109,84 @@ public class MobileController : MonoBehaviour
         Right = !true;
     }
 
+    //StartingScreen
+    public void MainScreenChooseLvl()
+    {
+        mainChooseLvl.SetActive(true);
+    }
+    public void MainScreenChsLvlReturn()
+    {
+        mainChsLvlReturn.SetActive(false);
+    }
+
+
+
+    //UI BUTTONS__________________________
+
+    //menu button
     public void CallMenu()
     {
-        menuMenu.SetActive(true);
+        maneMenu.SetActive(true);
+        gameplayButtons.SetActive(false);
         Time.timeScale = 0;
     }
-    public void returnTogame()
+
+    //Maim Menu
+    public void ChooseLvlScreen()
     {
-        menuMenu.SetActive(false);
+        ChooseLvl.SetActive(true);
+        maneMenu.SetActive(false);
+    }
+    public void OptionsMenuCall()
+    {
+        OptionsMenu.SetActive(true);
+        maneMenu.SetActive(false);
+    }
+    public void maneMenuReturn()
+    {
+        maneMenu.SetActive(false);
+        gameplayButtons.SetActive(!false);
         Time.timeScale = 1;
     }
+    public void exitGame()
+    {
+        Application.Quit();
+    }
+
+
+    //Options Menu
     public void ResolutionLow()
     {
       LowRes = !false;
-      HiRes = false;
       NormRes = false;
-}
-    public void ResolutionHi()
-    {
-        LowRes = false;
-        HiRes = !false;
-        NormRes = false;
     }
     public void ResolutionNorm()
     {
         LowRes = false;
-        HiRes = false;
         NormRes = !false;
     }
-
-    public void ChooseLvlScreen()
+    public void PostProcess()
     {
-        ChooseLvl.SetActive(true);
+        PostProcessBool = !PostProcessBool;
     }
-
-    public void SkipLvls()
+    public void MusicPlay()
     {
-        menuMenu.SetActive(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(11);
-    }
-    public void SkipLvls21()
-    {
-        menuMenu.SetActive(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(21);
-    }
-    public void SkipLvls38()
-    {
-        menuMenu.SetActive(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(37);
-    }
-    public void SkipLvls45()
-    {
-        menuMenu.SetActive(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(44);
-    }
-
-    public void Boss()
-    {
-        menuMenu.SetActive(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(33);
-    }
-
-    IEnumerator vibration()
-    {
-        if(Thrusting == true)
+        musicPlayBool = !musicPlayBool;
+        if (musicPlayBool)
         {
-           vibrCarout = true;
-           yield return new WaitForSeconds(0);
-           Handheld.Vibrate();
-           yield return new WaitForSeconds(0.4f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.4f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.4f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.4f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.4f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.3f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.2f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            Handheld.Vibrate();
-            yield return new WaitForSeconds(0.1f);
-            vibrCarout = !true;
-        }
-        else
+            //music.SetActive(true);
+            //slider.SetActive(true);
+        }else
         {
-            StopCoroutine(vibration());
-            vibrCarout = !true;
+            //music.SetActive(!true);
+            //slider.SetActive(!true);
         }
-
     }
+    public void returnTogame()
+    {
+        OptionsMenu.SetActive(false);
+        gameplayButtons.SetActive(!false);
+        Time.timeScale = 1;
+    }
+
 }

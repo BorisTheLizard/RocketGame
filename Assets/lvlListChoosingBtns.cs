@@ -10,15 +10,8 @@ public class lvlListChoosingBtns : MonoBehaviour
 
     [SerializeField] GameObject btnForvard;
     [SerializeField] GameObject btnBack;
-
+    [SerializeField] GameObject gameplayButtons;
     [SerializeField] GameObject LvlList;
-
-    //public static int LvlPassedCounter;
-
-    void Start()
-    {
-        //LvlPassedCounter = SceneManager.GetActiveScene().buildIndex;
-    }
 
     public void ChangeFrwd()
     {
@@ -36,6 +29,8 @@ public class lvlListChoosingBtns : MonoBehaviour
     }
     public void Return()
     {
+        Time.timeScale = 1;
+        gameplayButtons.SetActive(!false);
         LvlList.SetActive(false);
     }
 }
