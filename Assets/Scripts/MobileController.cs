@@ -17,12 +17,14 @@ public class MobileController : MonoBehaviour
 
     //UI
     [SerializeField] GameObject maneMenu;
-    [SerializeField] GameObject ChooseLvl;
-    [SerializeField] GameObject mainChooseLvl;
+
     [SerializeField] GameObject OptionsMenu;
     [SerializeField] GameObject mainChsLvlReturn;
     [SerializeField] GameObject gameplayButtons;
-
+    //choose LVL
+    [SerializeField] GameObject ChooseLvl;
+    [SerializeField] GameObject mainChooseLvl;
+    [SerializeField] Animator chooseLvlAnim;
 
     //Resolution Change bools
     public static bool LowRes = false;
@@ -135,6 +137,8 @@ public class MobileController : MonoBehaviour
     public void ChooseLvlScreen()
     {
         ChooseLvl.SetActive(true);
+        chooseLvlAnim.SetTrigger("callAnim");
+        Debug.Log("AnimCalled");
         maneMenu.SetActive(false);
     }
     public void OptionsMenuCall()
