@@ -8,14 +8,15 @@ public class optionsMenueAnim : MonoBehaviour
     [SerializeField] float scrollSpeed = 0.5f;
     [SerializeField] Image panel;
     [SerializeField] GameObject panelObj;
+    [SerializeField] GameObject canvas;
     bool inUse = false;
 
 
     public void Update()
     {
-        Debug.Log(Time.timeScale);
         if (inUse == false && panelObj.activeSelf == true && panel.fillAmount < 1)
         {
+            canvas.GetComponent<mainMenuBackgroundScroll>().enabled = false;
             Time.timeScale = 1;
             panel.fillAmount += scrollSpeed * Time.deltaTime;
         }

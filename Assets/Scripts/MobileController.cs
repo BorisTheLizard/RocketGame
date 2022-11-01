@@ -17,6 +17,7 @@ public class MobileController : MonoBehaviour
 
     //UI
     [SerializeField] GameObject maneMenu;
+    [SerializeField] GameObject canvas;
 
     [SerializeField] GameObject OptionsMenu;
     [SerializeField] GameObject mainChsLvlReturn;
@@ -143,6 +144,7 @@ public class MobileController : MonoBehaviour
     }
     public void OptionsMenuCall()
     {
+        Time.timeScale = 0;
         OptionsMenu.SetActive(true);
         maneMenu.SetActive(false);
     }
@@ -188,6 +190,7 @@ public class MobileController : MonoBehaviour
     }
     public void returnTogame()
     {
+        canvas.GetComponent<mainMenuBackgroundScroll>().enabled = !false;
         OptionsMenu.SetActive(false);
         gameplayButtons.SetActive(!false);
         Time.timeScale = 1;
