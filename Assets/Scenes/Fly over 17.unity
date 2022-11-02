@@ -3276,12 +3276,16 @@ PrefabInstance:
       value: 16.116602
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 16.412727
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.64
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.49
+      value: 57.3536
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3321,11 +3325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776263, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: direction.x
-      value: -50
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776263, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: direction.y
-      value: -100
+      value: -150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
@@ -4466,15 +4470,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.661299
+      value: 25.795128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.329178
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.08
+      value: -22.6461
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.5
+      value: 57.7078
       objectReference: {fileID: 0}
     - target: {fileID: 6270954588757776259, guid: b4babf40be18c4445a61b1bd738a9f60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12224,7 +12232,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0858586, y: 1}
+    m_SensorSize: {x: 0.3627946, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

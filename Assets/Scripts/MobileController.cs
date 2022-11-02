@@ -139,7 +139,9 @@ public class MobileController : MonoBehaviour
     {
         ChooseLvl.SetActive(true);
         chooseLvlAnim.SetTrigger("callAnim");
-        Debug.Log("AnimCalled");
+        //canvas.GetComponent<mainMenuBackgroundScroll>().mainMenuInUse=true;
+        //canvas.GetComponent<optionsMenueAnim>().enabled = false;
+        Time.timeScale = 0;
         maneMenu.SetActive(false);
     }
     public void OptionsMenuCall()
@@ -190,7 +192,8 @@ public class MobileController : MonoBehaviour
     }
     public void returnTogame()
     {
-        canvas.GetComponent<mainMenuBackgroundScroll>().enabled = !false;
+        canvas.GetComponent<mainMenuBackgroundScroll>().enabled = true;
+        //canvas.GetComponent<optionsMenueAnim>().enabled = !false;
         OptionsMenu.SetActive(false);
         gameplayButtons.SetActive(!false);
         Time.timeScale = 1;

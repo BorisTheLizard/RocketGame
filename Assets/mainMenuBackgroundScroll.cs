@@ -9,6 +9,7 @@ public class mainMenuBackgroundScroll : MonoBehaviour
     [SerializeField] Image panel;
     [SerializeField] GameObject panelObj;
     bool inUse = false;
+    //public bool mainMenuInUse = false;
 
 
     public void Update()
