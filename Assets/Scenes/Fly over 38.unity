@@ -2855,9 +2855,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: parts
+      value: 
+      objectReference: {fileID: 4437741134124941175}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: postProcess
       value: 
       objectReference: {fileID: 8331238492600753566}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: stazisParts
+      value: 
+      objectReference: {fileID: 4437741134124941176}
     - target: {fileID: 5762385148147229404, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2870,6 +2878,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8388955394798845223, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: stazisStop
+      value: 
+      objectReference: {fileID: 4437741134124941177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
 --- !u!4 &1249351251 stripped
@@ -9109,7 +9121,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.33670035, y: 1}
+    m_SensorSize: {x: 2.0925925, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9397,7 +9409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4447103341351762230, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -71.7
+      value: -72.51
       objectReference: {fileID: 0}
     - target: {fileID: 4447103341351762230, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9436,6 +9448,21 @@ PrefabInstance:
 --- !u!1 &4437741134124941174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1727275412764003498, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941175 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5366526943200109994, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941176 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4279530234945096388, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941177 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1166192445032980712, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
   m_PrefabInstance: {fileID: 4437741134124941173}
   m_PrefabAsset: {fileID: 0}
 --- !u!135 &4437741134124941180

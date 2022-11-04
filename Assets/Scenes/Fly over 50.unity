@@ -28564,7 +28564,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371039264}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -47277,15 +47277,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 690508793236931915, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1865583786072215513, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1876405416174152275, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -59.999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008360382520050914, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881432044852683860, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5762385148147229376, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_Pivot.x
@@ -47372,9 +47380,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: parts
+      value: 
+      objectReference: {fileID: 4437741134124941175}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: postProcess
       value: 
       objectReference: {fileID: 8331238492600753566}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: stazisParts
+      value: 
+      objectReference: {fileID: 4437741134124941176}
     - target: {fileID: 5762385148147229404, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -47387,6 +47403,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -59.999756
       objectReference: {fileID: 0}
+    - target: {fileID: 8388955394798845223, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: stazisStop
+      value: 
+      objectReference: {fileID: 4437741134124941177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
 --- !u!1001 &1232657151
@@ -58596,7 +58616,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371039264}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -83327,7 +83347,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1464647, y: 1}
+    m_SensorSize: {x: 1.979798, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -85752,6 +85772,21 @@ PrefabInstance:
 --- !u!1 &4437741134124941174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1727275412764003498, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941175 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5366526943200109994, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941176 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4279530234945096388, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941177 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1166192445032980712, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
   m_PrefabInstance: {fileID: 4437741134124941173}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5605573737260309571

@@ -6,12 +6,13 @@ public class activateObjTrigger : MonoBehaviour
 {
     [SerializeField] GameObject[] objectsToActive;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "triggerrator")
+        if (other.tag == "Rocket")
         {
             foreach (GameObject toActive in objectsToActive)
             {
+                Debug.Log("ACtivating");
                 toActive.SetActive(true);
             } 
         }

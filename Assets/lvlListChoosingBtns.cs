@@ -29,7 +29,7 @@ public class lvlListChoosingBtns : MonoBehaviour
     }
     public void Return()
     {
-        Time.timeScale = 1;
+        TimeManager.StopTime = false;
         gameplayButtons.SetActive(!false);
         LvlList.SetActive(false);
     }

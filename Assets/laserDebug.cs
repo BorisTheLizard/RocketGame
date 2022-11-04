@@ -5,14 +5,24 @@ using UnityEngine;
 public class laserDebug : MonoBehaviour
 {
     [SerializeField] float laserPower = 100f;
-    private void OnParticleCollision(GameObject other)
+    AudioSource audioSource;
+
+    private void Start()
     {
-        float randX = Random.Range(-100, 100);
-        float randY = Random.Range(-100, 100);
+        audioSource = GetComponent<AudioSource>();
+    }
+    public void OnParticleCollision(GameObject other)
+    {
+        float randX = Random.Range(-1000, 1000);
+        float randY = Random.Range(-1000, 1000);
 
         if (other.tag == "Rocket")
         {
+            audioSource.Play();
             other.GetComponent<Rigidbody>().AddForce(randX, randY, 0 * laserPower, ForceMode.Impulse);
+            //other.GetComponent<Rigidbody>().angularDrag = 5;
+            //other.GetComponent<Rigidbody>().drag = 5;
+            //other.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

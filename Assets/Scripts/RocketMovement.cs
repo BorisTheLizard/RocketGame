@@ -8,12 +8,14 @@ using UnityEngine.EventSystems;
 public class RocketMovement : MonoBehaviour
 {
     [SerializeField] float mainThrust = 100;
+    [SerializeField] float thrustMultyplier = 400f;
     [SerializeField] float rotation = 100;
     [SerializeField] AudioClip mainEngine;
 
     [SerializeField] ParticleSystem Flame;
     [SerializeField] ParticleSystem RightThrust;
     [SerializeField] ParticleSystem LeftThrust;
+    //[SerializeField] ParticleSystem stazisParts;
     [SerializeField] GameObject spinner;
 
     CapsuleCollider col;
@@ -21,7 +23,6 @@ public class RocketMovement : MonoBehaviour
 
     Rigidbody rb;
     AudioSource audioSource;
-    bool isAlive;
 
     
     void Start()
@@ -37,6 +38,8 @@ public class RocketMovement : MonoBehaviour
     {
         ProcessThrust();
         ProcessRotation();
+        //checkForGravity();
+
         float vectorZ = transform.eulerAngles.z;
         if(transform.rotation.x != 0)
         {
@@ -62,8 +65,17 @@ public class RocketMovement : MonoBehaviour
 
     private void Thrusting()
     {
-        rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-        transform.position = new Vector3(transform.position.x, transform.position.y, 1.33f);
+        if (!TimeManager.SlowTime)
+        {
+            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 1.33f);
+        }
+        else
+        {
+            rb.AddRelativeForce(Vector3.up * mainThrust * thrustMultyplier * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 1.33f);
+        }
+
 
         if (!audioSource.isPlaying)
         {
@@ -104,9 +116,18 @@ public class RocketMovement : MonoBehaviour
 
     public void ApplyRotation(float rotationThisFrame)
     {
-        rb.freezeRotation = true;
-        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-        rb.freezeRotation = false;
+        if (!TimeManager.SlowTime)
+        {
+             rb.freezeRotation = true;
+             transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
+             rb.freezeRotation = false;
+        }
+        else
+        {
+            rb.freezeRotation = true;
+            transform.Rotate(Vector3.forward * rotationThisFrame * 2f * Time.deltaTime);
+            rb.freezeRotation = false;
+        }
     }
     private bool IsGrouded()
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.68
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24898732, g: 0.10779839, b: 0.39102012, a: 0.68}
+  m_IndirectSpecularColor: {r: 0.3772497, g: 0.17225671, b: 0.560971, a: 0.68}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2091,7 +2091,7 @@ PrefabInstance:
       objectReference: {fileID: 1334761132}
     - target: {fileID: 8164285867976941367, guid: 088cf108b87e8e44999ec9fb722a021d, type: 3}
       propertyPath: DIstance
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8559064431302209743, guid: 088cf108b87e8e44999ec9fb722a021d, type: 3}
       propertyPath: m_RootOrder
@@ -3963,9 +3963,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: parts
+      value: 
+      objectReference: {fileID: 4437741134124941175}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: postProcess
       value: 
       objectReference: {fileID: 8331238492600753566}
+    - target: {fileID: 5762385148147229377, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: stazisParts
+      value: 
+      objectReference: {fileID: 4437741134124941176}
     - target: {fileID: 5762385148147229404, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3974,6 +3982,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8388955394798845223, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
+      propertyPath: stazisStop
+      value: 
+      objectReference: {fileID: 4437741134124941177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b3b7bda7b89a24e8f059d05e2469fc, type: 3}
 --- !u!1 &1258054643
@@ -7248,7 +7260,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0858586, y: 1}
+    m_SensorSize: {x: 2.087542, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7604,6 +7616,21 @@ PrefabInstance:
 --- !u!1 &4437741134124941174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1727275412764003498, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941175 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5366526943200109994, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941176 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4279530234945096388, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
+  m_PrefabInstance: {fileID: 4437741134124941173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4437741134124941177 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1166192445032980712, guid: 3a21798939b28ad48a625ea26c37474d, type: 3}
   m_PrefabInstance: {fileID: 4437741134124941173}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5605573737260309571

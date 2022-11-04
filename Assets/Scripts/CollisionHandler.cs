@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class CollisionHandler : MonoBehaviour
 
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem crashParticles;
+    [SerializeField] ParticleSystem thruStingParts;
     [SerializeField] Light deathLight;
 
     [SerializeField] GameObject[] rocketParts;
     [SerializeField] GameObject self;
     GameObject ButtonAcelerate;
+    GameObject canvas;
 
     AudioSource audioSource;
 
@@ -28,9 +31,9 @@ public class CollisionHandler : MonoBehaviour
     void Start()
 
     {
+        canvas = GameObject.Find("Canvas");
         audioSource = GetComponent<AudioSource>();
         ButtonAcelerate = GameObject.Find("ButtonAccelerate");
-        //Debug.Log(lvlListChoosingBtns.LvlPassedCounter);
     }
     void Update()
     {
@@ -48,7 +51,6 @@ public class CollisionHandler : MonoBehaviour
             Debug.Log("Cheat");
         }
     }
-
 
 
     void OnCollisionEnter(Collision other)
@@ -69,13 +71,13 @@ public class CollisionHandler : MonoBehaviour
                 break;
             case "Finish":
                 StartSuccessSequence();
-                ButtonAcelerate.SetActive(false);
+                //ButtonAcelerate.SetActive(false);
                 MobileController.Thrusting = false;
                 Handheld.Vibrate();
                 break;
             default:
                 StartCrashSequence();
-                ButtonAcelerate.SetActive(false);
+                //ButtonAcelerate.SetActive(false);
                 MobileController.Thrusting = false;
                 Handheld.Vibrate();
                 break;
@@ -89,20 +91,31 @@ public class CollisionHandler : MonoBehaviour
 
     private void NextLevelStart()
     {
+        canvas.SetActive(false);
+        TimeManager.SlowTime = false;
+        TimeManager.timeToSlowdown = false;
+        MobileController.slowTimeBool = false;
+        TimeManager.SlowTime = false;
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(finishLevel);
         successParticles.Play();
+        thruStingParts.Stop();
         self.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
         GetComponent<RocketMovement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDelay);
     }
     void StartCrashSequence()
     {
+        canvas.SetActive(false);
+        TimeManager.SlowTime = false;
+        TimeManager.timeToSlowdown = false;
+        MobileController.slowTimeBool = false;
+        TimeManager.SlowTime = false;
         anim.SetTrigger("boom");
         {
         
-        isTransitioning = true;
+            isTransitioning = true;
 
             foreach(GameObject parts in rocketParts)
             {
@@ -121,19 +134,19 @@ public class CollisionHandler : MonoBehaviour
                         rb.AddExplosionForce(power, explosionPos, radius, 5000.0F);
                 }
             }
-
-        audioSource.Stop();
-        audioSource.PlayOneShot(crashSound);
-        crashParticles.Play();
-        deathLight.GetComponent<Light>().enabled = true;
-        GetComponent<RocketMovement>().enabled = false;
-        Invoke("ReloadLevel", levelLoadDelay);
-        
+            audioSource.Stop();
+            audioSource.PlayOneShot(crashSound);
+            crashParticles.Play();
+            thruStingParts.Stop();
+            deathLight.GetComponent<Light>().enabled = true;
+            GetComponent<RocketMovement>().enabled = false;
+            Invoke("ReloadLevel", levelLoadDelay);
         }
     }
 
     void LoadNextLevel()
     {
+        TimeManager.SlowTime = false;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 

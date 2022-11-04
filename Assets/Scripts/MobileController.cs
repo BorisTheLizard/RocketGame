@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MobileController : MonoBehaviour
 {
+    //buttons
     public static bool Thrusting;
     public static bool Right;
     public static bool Left;
+    [SerializeField] Button slowDownButt;
+    [SerializeField] GameObject slowdownCounter;
+    public static bool slowTimeBool = false;
 
     public static int ScreenWidth;
     public static int ScreenHeight;
@@ -18,10 +22,10 @@ public class MobileController : MonoBehaviour
     //UI
     [SerializeField] GameObject maneMenu;
     [SerializeField] GameObject canvas;
-
     [SerializeField] GameObject OptionsMenu;
     [SerializeField] GameObject mainChsLvlReturn;
     [SerializeField] GameObject gameplayButtons;
+
     //choose LVL
     [SerializeField] GameObject ChooseLvl;
     [SerializeField] GameObject mainChooseLvl;
@@ -36,12 +40,21 @@ public class MobileController : MonoBehaviour
     //music
     GameObject music;
     [SerializeField] GameObject slider;
-    
+
+    //Flying particles
+    [SerializeField] ParticleSystem parts;
+    [SerializeField] ParticleSystem stazisParts;
+
     public static bool musicPlayBool = !false;
+
+    GameObject rocket;
+    AudioSource audioSource;
+    [SerializeField] AudioClip startStazis;
 
     private void Start()
     {
-        
+        rocket = GameObject.Find("Rocket");
+        audioSource = GetComponent<AudioSource>();
         music = GameObject.Find("musicPlay");
         //audioSource = music.GetComponent<AudioSource>();
         //musicMixer = music.GetComponent<AudioMixer>();
@@ -93,6 +106,7 @@ public class MobileController : MonoBehaviour
     }
     public void ClickUp()
     {
+        parts.Stop();
         Thrusting = !true;
     }
     public void ClickDownLeft()
@@ -110,6 +124,22 @@ public class MobileController : MonoBehaviour
     public void ClickUpRight()
     {
         Right = !true;
+    }
+
+    public void SlowTime()
+    {
+        if (!slowTimeBool)
+        {
+            audioSource.PlayOneShot(startStazis);
+            TimeManager.SlowTime = true;
+            slowDownButt.interactable = false;
+            slowdownCounter.SetActive(true);
+            slowTimeBool = true;
+            stazisParts.Play();
+            rocket.GetComponent<Rigidbody>().useGravity = false;
+            rocket.GetComponent<Rigidbody>().drag = 20f;
+            rocket.GetComponent<Rigidbody>().angularDrag = 20f;
+        }
     }
 
     //StartingScreen
@@ -131,7 +161,7 @@ public class MobileController : MonoBehaviour
     {
         maneMenu.SetActive(true);
         gameplayButtons.SetActive(false);
-        Time.timeScale = 0;
+        TimeManager.StopTime = true;
     }
 
     //Maim Menu
@@ -139,14 +169,10 @@ public class MobileController : MonoBehaviour
     {
         ChooseLvl.SetActive(true);
         chooseLvlAnim.SetTrigger("callAnim");
-        //canvas.GetComponent<mainMenuBackgroundScroll>().mainMenuInUse=true;
-        //canvas.GetComponent<optionsMenueAnim>().enabled = false;
-        Time.timeScale = 0;
         maneMenu.SetActive(false);
     }
     public void OptionsMenuCall()
     {
-        Time.timeScale = 0;
         OptionsMenu.SetActive(true);
         maneMenu.SetActive(false);
     }
@@ -154,7 +180,7 @@ public class MobileController : MonoBehaviour
     {
         maneMenu.SetActive(false);
         gameplayButtons.SetActive(!false);
-        Time.timeScale = 1;
+        TimeManager.StopTime = false;
     }
     public void exitGame()
     {
@@ -192,11 +218,10 @@ public class MobileController : MonoBehaviour
     }
     public void returnTogame()
     {
-        canvas.GetComponent<mainMenuBackgroundScroll>().enabled = true;
-        //canvas.GetComponent<optionsMenueAnim>().enabled = !false;
+        //canvas.GetComponent<mainMenuBackgroundScroll>().enabled = true;
         OptionsMenu.SetActive(false);
         gameplayButtons.SetActive(!false);
-        Time.timeScale = 1;
+        TimeManager.StopTime = false;
     }
 
 }

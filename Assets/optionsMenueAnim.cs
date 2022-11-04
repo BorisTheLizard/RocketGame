@@ -16,19 +16,17 @@ public class optionsMenueAnim : MonoBehaviour
     {
         if (inUse == false && panelObj.activeSelf == true && panel.fillAmount < 1)
         {
-            canvas.GetComponent<mainMenuBackgroundScroll>().enabled = false;
-            Time.timeScale = 1;
+            TimeManager.StopTime = false;
             panel.fillAmount += scrollSpeed * Time.deltaTime;
         }
         else if (panel.fillAmount == 1 && panelObj.activeSelf == true)
         {
+            TimeManager.StopTime = !false;
             inUse = true;
-            Time.timeScale = 0;
         }
         else if (panelObj.activeSelf == false)
         {
             inUse = !true;
-            Time.timeScale = 1;
             panel.fillAmount = 0;
         }
     }

@@ -8,20 +8,16 @@ public class lvlSelector : MonoBehaviour
 {
     public int lvl;
     public Text lvlText;
-    //Button butt;
-    //[SerializeField] bool lvlPassed = false;
 
     private void Start()
     {
         lvlText.text = lvl.ToString();
-        //butt = GetComponent<Button>();
-        //butt.interactable = false;
     }
 
 
     public void OpenScene()
     {
-        Time.timeScale = 1;
+        TimeManager.StopTime = false;
         SceneManager.LoadScene("Fly over " + lvl.ToString());
     }
 }
