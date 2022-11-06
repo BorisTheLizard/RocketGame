@@ -274,7 +274,7 @@ Light:
   m_BounceIntensity: 0.65
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: 1.1681478e-37, z: 9.78048e-39, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e884b49339beff74b8079dcd876eddd3, type: 2}
+      objectReference: {fileID: 2100000, guid: b9bddfec682aa59439f415e9fb7da4bf, type: 2}
     - target: {fileID: 919132149155446097, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Name
       value: Rock (25)
@@ -1528,7 +1528,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 62540b44a44fd814abee1113f66fce8a, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a7e7d845e7c95a47a685269c94e9e34, type: 2}
     - target: {fileID: 919132149155446097, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Name
       value: Rock (23)
@@ -2459,7 +2459,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: 4.500301e-39, z: 4.545857e-39, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2573,7 +2573,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e884b49339beff74b8079dcd876eddd3, type: 2}
+      objectReference: {fileID: 2100000, guid: a84aa2fae88d7dd40a936b1fb754e2bf, type: 2}
+    - target: {fileID: -5754084199372789682, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4199401309831131938, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
     - target: {fileID: 919132149155446097, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Name
       value: Rock (4)
@@ -2897,7 +2901,7 @@ Light:
   m_BounceIntensity: 0.65
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.00004367921, y: 2.0030642, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3273,7 +3277,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.5381154e+11, y: 7.1449484e+31, z: 5.4213887e-11, w: 1.7e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3789,7 +3793,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f04a8e6abbb6413459a6ed0afa81dff9, type: 2}
+      objectReference: {fileID: 2100000, guid: 8e9b616a460f0864fb47625d005e293c, type: 2}
     - target: {fileID: 919132149155446097, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Name
       value: Rock (41)
@@ -4506,7 +4510,7 @@ Light:
   m_BounceIntensity: 0.65
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.7e-43, y: 56.501373, z: 7.7e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4839,7 +4843,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e884b49339beff74b8079dcd876eddd3, type: 2}
+      objectReference: {fileID: 2100000, guid: 57fea18fbc1018b42a4db375cd4f3e5b, type: 2}
+    - target: {fileID: -5754084199372789682, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4199401309831131938, guid: fd038ecdd68f3f546b6b68882390b6f9, type: 3}
     - target: {fileID: 919132149155446097, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Name
       value: Rock (34)
@@ -4945,7 +4953,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f04a8e6abbb6413459a6ed0afa81dff9, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a7e7d845e7c95a47a685269c94e9e34, type: 2}
+    - target: {fileID: -5754084199372789682, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4199401309831131938, guid: fd038ecdd68f3f546b6b68882390b6f9, type: 3}
     - target: {fileID: 919132149155446097, guid: bc39696dde92e1d46aa20376eae3061f, type: 3}
       propertyPath: m_Name
       value: Rock (6)
@@ -5213,7 +5225,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.979798, y: 1}
+    m_SensorSize: {x: 2.090909, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5585,6 +5597,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3454499857086789724, guid: ea512d4ab0897764198436f40d725d20, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1.1882691e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454499857086789724, guid: ea512d4ab0897764198436f40d725d20, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.1885432e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454499857086789724, guid: ea512d4ab0897764198436f40d725d20, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 7.7e-43
+      objectReference: {fileID: 0}
     - target: {fileID: 4147553659475445035, guid: ea512d4ab0897764198436f40d725d20, type: 3}
       propertyPath: Player
       value: 
@@ -5702,6 +5726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9072363024411448440, guid: 1351f40a0b3794b41abe3e7e6993be20, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b9bddfec682aa59439f415e9fb7da4bf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1351f40a0b3794b41abe3e7e6993be20, type: 3}
 --- !u!1001 &8331238492600753565

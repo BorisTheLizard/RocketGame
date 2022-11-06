@@ -18,7 +18,6 @@ public class pressSoundMaker : MonoBehaviour
         }
         else
         {
-            Debug.Log("Collision sound play");
             source.Play();
         }
     }

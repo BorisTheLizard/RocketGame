@@ -50,6 +50,8 @@ public class MobileController : MonoBehaviour
     GameObject rocket;
     AudioSource audioSource;
     [SerializeField] AudioClip startStazis;
+    [SerializeField] GameObject stazisButtonObj;
+    private bool rotator = false;
 
     private void Start()
     {
@@ -98,6 +100,11 @@ public class MobileController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(rotator)
+        stazisButtonObj.transform.Rotate(0, 0, 100 * Time.deltaTime);
+    }
 
     //ROCKET Controller
     public void ClickDown()
@@ -139,6 +146,7 @@ public class MobileController : MonoBehaviour
             rocket.GetComponent<Rigidbody>().useGravity = false;
             rocket.GetComponent<Rigidbody>().drag = 20f;
             rocket.GetComponent<Rigidbody>().angularDrag = 20f;
+            rotator = true;
         }
     }
 

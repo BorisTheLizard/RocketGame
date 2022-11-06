@@ -18,7 +18,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] GameObject[] rocketParts;
     [SerializeField] GameObject self;
     GameObject ButtonAcelerate;
-    GameObject canvas;
+    GameObject buttonHolder;
 
     AudioSource audioSource;
 
@@ -31,7 +31,7 @@ public class CollisionHandler : MonoBehaviour
     void Start()
 
     {
-        canvas = GameObject.Find("Canvas");
+        buttonHolder = GameObject.Find("buttonHolder");
         audioSource = GetComponent<AudioSource>();
         ButtonAcelerate = GameObject.Find("ButtonAccelerate");
     }
@@ -91,7 +91,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void NextLevelStart()
     {
-        canvas.SetActive(false);
+        buttonHolder.SetActive(false);
         TimeManager.SlowTime = false;
         TimeManager.timeToSlowdown = false;
         MobileController.slowTimeBool = false;
@@ -107,7 +107,7 @@ public class CollisionHandler : MonoBehaviour
     }
     void StartCrashSequence()
     {
-        canvas.SetActive(false);
+        buttonHolder.SetActive(false);
         TimeManager.SlowTime = false;
         TimeManager.timeToSlowdown = false;
         MobileController.slowTimeBool = false;
